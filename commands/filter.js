@@ -9,7 +9,7 @@ module.exports = {
     try {
       const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
       const queue = client?.player?.getQueue(interaction?.guild?.id);
-      if (!queue || !queue?.playing) return interaction?.reply({ content: '⚠️ No music playing!!', ephemeral: true }).catch(e => { })
+      if (!queue || !queue?.playing) return interaction?.reply({ content: '⚠️ Nessuna canzone in riproduzine!!', ephemeral: true }).catch(e => { })
 
       let buttons = new ActionRowBuilder().addComponents(
         new ButtonBuilder()
